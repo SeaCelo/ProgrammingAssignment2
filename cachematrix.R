@@ -5,8 +5,9 @@
 ## The function call is: cacheSolve(makeCacheMatrix(x))
 ## where x is the invertible matrix.
 
-## Write a short comment describing this function
-
+## This function creates a list of items that can be called from another function.
+## This function is meant to be nested into another function that looks for the list of
+## items created by this one. The 4 items in the list are: set; get; setinverse; getinverse
 makeCacheMatrix <- function(x = matrix()) {
         m <- NULL               # initializes m
         set <- function(y) {
@@ -22,7 +23,8 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Write a short comment describing this function
+## This function looks for the result of the operation inside the list of the cache function.
+## If found, it returns the cached value. If not, it computes the inverse of the matrix x.
 
 cacheSolve <- function(x, ...) {
         ## Return a matrix that is the inverse of 'x'
